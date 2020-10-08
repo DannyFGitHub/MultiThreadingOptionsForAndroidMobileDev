@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="1"
+        android:rowCount="2"
+        >
+
+    <ProgressBar
+        android:id="@+id/pb_main_infinite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        />
+
+    <ProgressBar
+        android:id="@+id/pb_main_loadingbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:visibility="gone"
+        android:max="30"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="50dp"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/tv_digit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            style="@style/TextAppearance.AppCompat.Large"
+            />
+
+        <TextView
+            android:id="@+id/tv_digit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            style="@style/TextAppearance.AppCompat.Large"
+            />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        >
+
+    <Button
+        android:id="@+id/btn_main_1"
+        android:onClick="method1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Method1"
+        />
+    <Button
+        android:id="@+id/btn_main_2"
+        android:onClick="method2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Method2"
+        />
+    <Button
+        android:id="@+id/btn_main_3"
+        android:onClick="method3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Method3"
+        />
+    <Button
+        android:id="@+id/btn_main_4"
+        android:onClick="method4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Method4"
+        />
+    <Button
+        android:id="@+id/btn_main_5"
+        android:onClick="method5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Method5 - With Infinite Loading"
+        />
+    <Button
+        android:id="@+id/btn_main_6"
+        android:onClick="method6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Method6 - With Loading Bar"
+        />
+        <Button
+            android:id="@+id/btn_main_7"
+            android:onClick="method7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Method7 - Using Handler with Looper"
+            />
+
+    </TableLayout>
+
+    </GridLayout>
+
+</LinearLayout>
